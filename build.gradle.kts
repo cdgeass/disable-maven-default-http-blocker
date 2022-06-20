@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.cdgeass"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -31,6 +31,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("213")
+        untilBuild.set("")
     }
 
     signPlugin {

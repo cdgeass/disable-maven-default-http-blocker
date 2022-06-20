@@ -14,7 +14,8 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Disable the default http blocker in bundled maven
+    The plugin disable the `maven-default-http-blocker` in bundled maven.
+    It will run after IDEA startup and modify the bundled maven's settings.xml to delete the `maven-default-http-blocker`.
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
