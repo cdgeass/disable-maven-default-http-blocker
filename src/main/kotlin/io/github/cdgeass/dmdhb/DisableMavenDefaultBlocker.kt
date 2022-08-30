@@ -38,11 +38,11 @@ class DisableMavenDefaultBlocker : StartupActivity.DumbAware {
                 val mirrorNodes = mirrors.childNodes
                 if (mirrorNodes.length >= 1) {
                     for (i in 0 until mirrorNodes.length) {
-                        val mirror = mirrorNodes.item(i)
+                        val mirror = mirrorNodes.item(i) ?: continue
                         val childNodes = mirror.childNodes
                         if (childNodes.length >= 1) {
                             for (j in 0 until childNodes.length) {
-                                val childNode = childNodes.item(j)
+                                val childNode = childNodes.item(j) ?: continue
                                 if (childNode.nodeName == "id") {
                                     val data = childNode.firstChild
                                     if (data is org.w3c.dom.CharacterData) {
